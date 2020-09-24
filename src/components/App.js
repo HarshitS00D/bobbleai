@@ -70,13 +70,24 @@ class App extends Component {
   onSubmit = async () => {
     if (this.validate()) {
       this.setState({ isLoading: true });
-      let result = await axios.post("https://reqres.in/api/register/", {
-        email: this.state.email,
-        password: this.state.password,
-      });
+      let result = await axios
+        .post("https://reqres.in/api/register/", {
+          email: this.state.email,
+          password: this.state.password,
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
       if (result) {
+        this.setState({ isLogged: true });
         console.log("success");
-      } else console.log("no success");
+      } else {
+        console.log("no success");
+        this.setState({
+          error_password:
+            "ERROR, Note: Only defined users succeed registration in https://Reqres.in (Use Email of Already Registerd User on Reqres.in)",
+        });
+      }
     } else console.log("validation error");
   };
 
