@@ -59,6 +59,7 @@ class App extends Component {
       this.setState({
         email: response.email,
         firstName: response.name,
+        lastName: "",
         imageUrl: response.picture.data.url,
         loggedThroughFacebook: true,
         isLogged: true,
