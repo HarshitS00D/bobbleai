@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&display=swap");
+
+$font-1: "Roboto";
+$font-2: "Montserrat";
+$font-3: "Quicksand";
+
+* {
+  color: #525252;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  size: 2em;
+  fill: rgb(18, 75, 161);
+  vertical-align: middle;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  box-shadow: 0px 0px 10px #00000029;
+}
+
+.container {
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  padding: 20px;
+  height: auto;
+  width: 40vw;
+  border: 2px solid #f1f1f1;
+
+  .title {
+    margin-bottom: 8%;
+    font-size: 18px;
+    color: grey;
+    font-family: $font-2;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    margin: 10px;
+    font-size: 40px;
+    color: gray;
+    font-family: $font-3;
+  }
+
+  .GoogleLoginBtn {
+    margin: 5px;
+    height: 40px;
+    width: 260px;
+    background-color: white;
+    border: none;
+    box-shadow: 2px 2px 2px #00000029;
+
+    span {
+      font-family: $font-2;
+      margin-left: 5px;
+    }
+  }
+
+  .FacebookLoginBtn {
+    margin: 5px;
+    height: 40px;
+    width: 260px;
+    background-color: white;
+    border: none;
+    box-shadow: 2px 2px 2px #00000029;
+
+    span {
+      font-family: $font-2;
+      margin-left: 5px;
+    }
+  }
+
+  .SubmitBtn {
+    border: none;
+    height: 40px;
+    background-color: rgb(65, 176, 228);
+    color: white;
+    width: 100%;
+  }
+
+  Form {
+    padding: 2% 6%;
+  }
+}
+
+.GoogleLogout {
+  margin-top: 20px;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 757px) {
+  .container {
+    width: 80vw;
+
+    .subtitle {
+      font-size: 35px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100vw;
+
+    .title {
+      font-size: 16px;
+    }
+
+    .subtitle {
+      font-size: 30px;
+    }
+  }
+}
